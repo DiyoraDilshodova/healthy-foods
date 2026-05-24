@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./style.css";
+import Card from "../card";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -14,15 +15,13 @@ const ProductList = () => {
     getData();
   }, []);
 
-  const data = Array.isArray(products) && products.length > 0 && products.slice(0, 6);
+  const data = Array.isArray(products) && products.length > 0 && products.slice(16, 22);
   return (
     <div className="products">
       {
-        data.map(el => {
-          <div className="product" key={el.id}>
-            {el.title}
-          </div>
-        })
+        data.length > 0 ? data.map(el => {
+          return <Card key={el.id} {...el}/>
+        }) : <p>No products available.</p>
       }
     </div>
   );
