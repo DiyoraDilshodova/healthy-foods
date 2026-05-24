@@ -1,0 +1,13 @@
+.products {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  background-color: lightgray;
+  width: 360px;
+  height: 446px;
+  border-radius: 60px 10px 60px 10px;
+}

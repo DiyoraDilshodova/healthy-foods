@@ -1,3 +1,4 @@
+import ProductList from "../productlist";
 import "./menu.css";  
 
 const Menu = () => {
@@ -11,14 +12,7 @@ const Menu = () => {
           need not only Just Food Stalls with Persons but also specialized
           equipment, Skills to manage Customers,{" "}
         </p>
-        <div className="products">
-            <div className="product"></div>
-            <div className="product"></div>
-            <div className="product"></div>
-            <div className="product"></div>
-            <div className="product"></div>
-            <div className="product"></div>
-        </div>
+        <ProductList/>
         <button className="menu-btn">Learn More</button>
       </div>
     </section>
