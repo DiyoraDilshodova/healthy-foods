@@ -15,7 +15,7 @@ const ProductList = () => {
     getData();
   }, []);
 
-  const data = Array.isArray(products) && products.length > 0 && products.slice(16, 22);
+  const data = Array.isArray(products) && products.length > 0 && products.slice(10, 16);
   return (
     <div className="products">
       {

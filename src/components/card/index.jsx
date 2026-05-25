@@ -1,5 +1,8 @@
+import React from "react";
 import "./style.css";
-const Card = ({ thumbnail, title, description, price }) => {
+import { Rating } from "react-simple-star-rating";
+
+const Card = ({ thumbnail, title, description, price, rating }) => {
   function truncate(str, max) {
     return str.length > max ? str.slice(0, max) + "..." : str;
   }
@@ -10,6 +13,7 @@ const Card = ({ thumbnail, title, description, price }) => {
       currency: "USD",
     });
   }
+
   return (
     <div className="product">
       <img src={thumbnail} alt={title} className="product-img" />
@@ -19,10 +23,20 @@ const Card = ({ thumbnail, title, description, price }) => {
           <p className="product-price">{formatPrice(price)}</p>
         </div>
         <p className="product-description">{truncate(description, 80)}</p>
+
+        {/* Reyting yulduzchalari */}
         <div className="product-review">
-            <button className="add-btn">+</button>
-            
+          <button className="add-btn">+</button>
+          <Rating
+            initialValue={Number(rating)} 
+            readonly={true} 
+            allowFraction={true}
+            size={22} 
+            fillColor="#DC780B" 
+          />
         </div>
+
+        <div className="product-action"></div>
       </div>
     </div>
   );
