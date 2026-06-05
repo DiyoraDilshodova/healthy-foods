@@ -1,0 +1,23 @@
+:root {
+  --R: "Roboto, sans-serif";
+  --Ph: "Philosopher, sans-serif";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.main {
+  padding-block: 100px;
+}
